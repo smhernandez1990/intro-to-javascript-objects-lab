@@ -56,3 +56,20 @@ console.log(pokeStarter)
 game.party.push(pokemon[6])
 
 console.log(game.party)
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+let psychRock = pokemon.filter(pokemon => pokemon.type === 'psychic');
+
+console.log(psychRock)
+
+game.party.push(pokemon[63],pokemon[121],pokemon[150])
+
+console.log(game.party);
