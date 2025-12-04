@@ -23,7 +23,9 @@ const game = {
 
 //console.dir(pokemon, { maxArrayLength: null})
 
-console.log(pokemon[58].name)
+const pokeTha59 = pokemon.find(p => p.number === 59)
+
+console.log(pokeTha59.name)
 
 //console.log(game)
 
@@ -124,3 +126,15 @@ console.log(game.party)
 const squirtleEvolve = pokemon.find(p => p.number === 8)
 game.party.splice(0, 1, squirtleEvolve)
 console.log(game.party)
+
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+for (let i = 0; i < game.party.length; i++){
+    console.log(game.party[i].name)
+}
