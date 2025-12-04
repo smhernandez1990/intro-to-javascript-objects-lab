@@ -73,3 +73,22 @@ console.log(psychRock)
 game.party.push(pokemon[63],pokemon[121],pokemon[150])
 
 console.log(game.party);
+
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
+
+
+Solve Exercise 6 here:
+*/
+
+const gymsCompleted = [];
+for (let i = 0; i < game.gyms.length; i++){
+    if (game.gyms[i].difficulty < 3){
+        game.gyms[i].completed = true
+        gymsCompleted.push(game.gyms[i])
+    }
+}
+console.log(gymsCompleted)
+console.log(game.gyms)
