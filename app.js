@@ -165,12 +165,12 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-let pokemonObj = pokemon.name
+let pokemonObj = {pokemon}
 
 game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
 }
 
-game.catchPokemon("Hypno")
+game.catchPokemon(pokemon[96])
 
 console.log(game.party)
