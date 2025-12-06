@@ -95,8 +95,8 @@ Solve Exercise 6 here:
 */
 
 const gymsCompleted = [];
-for (let i = 0; i < game.gyms.length; i++){
-    if (game.gyms[i].difficulty < 3){
+for (let i = 0; i < game.gyms.length; i++) {
+    if (game.gyms[i].difficulty < 3) {
         game.gyms[i].completed = true
         gymsCompleted.push(game.gyms[i])
     }
@@ -135,7 +135,7 @@ Exercise 8
 Solve Exercise 8 here:
 */
 
-for (let i = 0; i < game.party.length; i++){
+for (let i = 0; i < game.party.length; i++) {
     console.log(game.party[i].name)
 }
 
@@ -149,7 +149,7 @@ Solve Exercise 9 here:
 */
 
 //i already did this on exercise 4 so i'm just using the same const for this loop
-for (let i = 0; i < pokeStarter.length; i++){
+for (let i = 0; i < pokeStarter.length; i++) {
     console.log(pokeStarter[i].name)
 }
 
@@ -164,8 +164,6 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 
 Solve Exercise 10 here:
 */
-
-let pokemonObj = {pokemon}
 
 game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
@@ -188,7 +186,7 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
-let pokeballObj = game.items[1]
+let pokeballObj = game.items.find(item => item.name === 'pokeball')
 
 game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
@@ -239,12 +237,13 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 13 here:
 */
-const gymTally = {
-    completed: 0, 
-    incomplete: 0,
-}
+
 
 game.gymStatus = function () {
+    const gymTally = {
+        completed: 0,
+        incomplete: 0,
+    }
     for (let i = 0; i < game.gyms.length; i++) {
         if (game.gyms[i].completed === true) {
             gymTally.completed += 1
@@ -269,12 +268,22 @@ This method should:
 
 Solve Exercise 14 here:
 */
-
-game.partyCount = function(){
-    console.log(game.party.length)
-}
+console.log('exercise 14')
+game.partyCount = function() {
+    let pokeParty = 0;
+    //console.log(pokeParty)
+    //console.log(game.party)
+    for (let i = 0; i < game.party.length; i++) {
+        if (game.party[i].number >= 1) {
+            pokeParty = pokeParty + 1;
+         }
+    }
+    //console.log(pokeParty)
+    return pokeParty
+};
 
 game.partyCount()
+//i have tried pretty much everything i can to get this to return. i console logged everything along the way to make sure the loop was working and it seems to be so i'm not entirely sure why it wont return for me.
 
 /*
 Exercise 15
